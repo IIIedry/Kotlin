@@ -1,13 +1,13 @@
 package com.example.homework2
 
 fun main() {
-    val trafficLightColor = "Black"
+    val trafficLightColor = "Amber"
 
-    val message =
-        if (trafficLightColor == "Red") "Stop"
-        else if (trafficLightColor == "Yellow") "Slow"
-        else if (trafficLightColor == "Green") "Go"
-        else "Invalid traffic-light color"
-
+    val message = when(trafficLightColor) {
+        "Red" -> "Stop"
+        "Yellow", "Amber" -> "Slow"
+        "Green" -> "Go"
+        else -> "Invalid traffic-light color"
+    }
     println(message)
 }
