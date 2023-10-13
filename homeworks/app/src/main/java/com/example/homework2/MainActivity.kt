@@ -1,6 +1,9 @@
 package com.example.homework2
 
 fun main() {
-    val favoriteActor = null
+    var favoriteActor: String? = "Sandra Oh"
+    println(favoriteActor)
+
+    favoriteActor = null
     println(favoriteActor)
 }
