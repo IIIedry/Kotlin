@@ -1,9 +1,17 @@
 package com.example.homework2
 
+class SmartDevice {
+    fun turnOn(){
+        println("Smart device is turned on.")
+    }
+
+    fun turnOff(){
+        println("Smart device is turned off.")
+    }
+}
+
 fun main() {
-    var favoriteActor: String? = "Sandra Oh"
-
-    val lengthOfName = favoriteActor?.length ?: 0
-
-    println("The number of characters in your favorite actor's name is $lengthOfName.")
+    val smartTvDevice = SmartDevice()
+    smartTvDevice.turnOn()
+    smartTvDevice.turnOff()
 }
