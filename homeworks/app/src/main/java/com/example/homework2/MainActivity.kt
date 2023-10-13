@@ -1,16 +1,11 @@
 package com.example.homework2
 
 fun main() {
-    val coins: (Int) -> String = { quantity ->
-        "$quantity quarters"
-    }
-
-    val treatFunction = trickOrTreat(false, coins)
+    val treatFunction = trickOrTreat(false, { "$it quarters" })
     val trickFunction = trickOrTreat(true, null)
     treatFunction()
     trickFunction()
 }
-
 val trick = {
     println("No treats!")
 }
@@ -31,4 +26,8 @@ fun trickOrTreat(isTrick: Boolean, extraTreat: ((Int) -> String)?): () -> Unit {
 }
 val cupcake: (Int) -> String = {
     "Have a cupcake!"
+}
+
+val coins: (Int) -> String = {
+    "$it quarters"
 }
