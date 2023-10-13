@@ -1,6 +1,10 @@
 package com.example.homework2
 
 class SmartDevice {
+    val name = "Android TV"
+    val category = "Entertainment"
+    var deviceStatus = "online"
+
     fun turnOn(){
         println("Smart device is turned on.")
     }
@@ -10,8 +14,9 @@ class SmartDevice {
     }
 }
 
-fun main() {
+fun main(){
     val smartTvDevice = SmartDevice()
+    println("Device name is: ${smartTvDevice.name}")
     smartTvDevice.turnOn()
     smartTvDevice.turnOff()
 }
