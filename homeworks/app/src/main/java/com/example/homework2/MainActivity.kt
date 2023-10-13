@@ -1,38 +1,19 @@
 package com.example.homework2
 
+
 fun main() {
-    val treatFunction = trickOrTreat(false) { "$it quarters" }
-    val trickFunction = trickOrTreat(true, null)
-    repeat(4) {
-        treatFunction()
-    }
-    trickFunction()
+    val morningNotification = 51
+    val eveningNotification = 135
+
+    printNotificationSummary(morningNotification)
+    printNotificationSummary(eveningNotification)
 }
 
-val trick = {
-    println("No treats!")
-}
 
-val treat: () -> Unit = {
-    println("Have a treat!")
-}
-
-fun trickOrTreat(isTrick: Boolean, extraTreat: ((Int) -> String)?): () -> Unit {
-    if (isTrick) {
-        return trick
+fun printNotificationSummary(numberOfMessages: Int) {
+    if (numberOfMessages < 100) {
+        println("You have ${numberOfMessages} notifications.")
     } else {
-        if (extraTreat != null) {
-            println(extraTreat(5))
-        }
-        return treat
+        println("Your phone is blowing up! You have 99+ notifications.")
     }
 }
-val cupcake: (Int) -> String = {
-    "Have a cupcake!"
-}
-
-val coins: (Int) -> String = {
-    "$it quarters"
-}
-
-val treatFunction = trickOrTreat(false) { "$it quarters" }
