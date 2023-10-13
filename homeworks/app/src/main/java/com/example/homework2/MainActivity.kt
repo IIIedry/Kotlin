@@ -2,18 +2,31 @@ package com.example.homework2
 
 
 fun main() {
-    printFinalTemperature(27.0, "Celsius", "Fahrenheit") { 9.0 / 5.0 * it + 32 }
-    printFinalTemperature(350.0, "Kelvin", "Celsius") { it - 273.15 }
-    printFinalTemperature(10.0, "Fahrenheit", "Kelvin") { 5.0 / 9.0 * (it - 32) + 273.15 }
+    val amanda = Person("Amanda", 33, "play tennis", null)
+    val atiqah = Person("Atiqah", 28, "climb", amanda)
+
+    amanda.showProfile()
+    atiqah.showProfile()
 }
 
 
-fun printFinalTemperature(
-    initialMeasurement: Double,
-    initialUnit: String,
-    finalUnit: String,
-    conversionFormula: (Double) -> Double
-) {
-    val finalMeasurement = String.format("%.2f", conversionFormula(initialMeasurement)) // two decimal places
-    println("$initialMeasurement degrees $initialUnit is $finalMeasurement degrees $finalUnit.")
+class Person(val name: String, val age: Int, val hobby: String?, val referrer: Person?) {
+    fun showProfile() {
+        println("Name: $name")
+        println("Age: $age")
+        if(hobby != null) {
+            print("Likes to $hobby. ")
+        }
+        if(referrer != null) {
+            print("Has a referrer named ${referrer.name}")
+            if(referrer.hobby != null) {
+                print(", who likes to ${referrer.hobby}.")
+            } else {
+                print(".")
+            }
+        } else {
+            print("Doesn't have a referrer.")
+        }
+        print("\n\n")
+    }
 }
