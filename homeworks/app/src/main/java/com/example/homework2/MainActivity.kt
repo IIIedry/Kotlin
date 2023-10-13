@@ -1,7 +1,7 @@
 package com.example.homework2
 
 fun main() {
-    val trafficLightColor = "Yellow"
+    val trafficLightColor = "Black"
 
     if (trafficLightColor == "Red") {
         println("Stop")
