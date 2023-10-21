@@ -30,7 +30,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AppFirstTheme{
-                // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colorScheme.background) {
                     GreetingImage( stringResource(R.string.happy_birthday_text), "From Emma")
                 }
@@ -42,7 +41,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) {
     val image = painterResource(R.drawable.androidparty)
-    //Step 3 create a box to overlap image and texts
     Box {
         Image(
             painter = image,
@@ -62,7 +60,6 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
 
 @Composable
 fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
-    // Create a column so that texts don't overlap
     Column(
         verticalArrangement = Arrangement.Center,
         modifier = modifier
