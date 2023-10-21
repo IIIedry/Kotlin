@@ -2,4 +2,17 @@
     <string name="app_name">BusinessCard</string>
     <string name="jennifer_doe">Jennifer Doe</string>
     <string name="android_developer_extraordinaire">Android Developer Extraordinaire</string>
+    <string name="title_jetpack_compose_tutorial">Jetpack Compose tutorial</string>
+    <string name="compose_short_desc">Jetpack Compose is a modern toolkit for\nbuilding native Android UI. Compose\nsimplifies and accelerates UI development on\nAndroid with less code, powerful tools, and\nintuitive Kotlin APIs.</string>
+    <string name="compose_long_desc">In this tutorial, you build a simple UI\ncomponent with declarative functions. You\ncall Compose functions to say what elements\nyou want and the Compose compiler does the\nrest. Compose is built around Composable\nfunctions. These functions let you define your\napp\'s UI programmatically because they let\nyou describe how it should look and provide\ndata dependencies, rather than focus on the\nprocess of the UI\'s construction, such as\ninitializing an element and then attaching it to\na parent. To create a Composable function.\nyou add the @Composable annotation to the\nfunction name.</string>
+    <string name="all_task_completed">All tasks completed\n</string>
+    <string name="nice_work">Nice work!</string>
+    <string name="first_title">Text composable\n</string>
+    <string name="first_description">Displays text and\nfollows       the \nrecommended\nMaterial Design\nguidelines.</string>
+    <string name="second_title">Image composable</string>
+    <string name="second_description">Creates a composable\nthat lays out and\ndraws a given Painter\nclass object.</string>
+    <string name="third_title">Row composable</string>
+    <string name="third_description">A layout composable\nthat places its children\nin      a     horizontal\nsequence.</string>
+    <string name="fourth_title">Column composable</string>
+    <string name="fourth_description">A layout composable\nthat places its children\nin a vertical sequence.</string>
 </resources>
